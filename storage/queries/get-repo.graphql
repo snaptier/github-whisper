@@ -1,0 +1,29 @@
+query($owner: String!, $name: String!) {
+	repository(owner: $owner, name: $name) {
+		...RepoInfo
+		parent {
+			...RepoInfo
+		}
+	}
+}
+
+fragment RepoInfo on Repository {
+	databaseId
+	name
+	owner {
+		login
+	}
+	nameWithOwner
+	hasIssuesEnabled
+	isFork
+	isPrivate
+	viewerCanAdminister
+	isArchived
+	defaultBranchRef {
+		name
+		prefix
+		target {
+			oid
+		}
+	}
+}

@@ -1,0 +1,22 @@
+query($owner: String!, $name: String!, $id: Int!) {
+	repository(owner: $owner, name: $name) {
+		issue(number: $id) {
+			number
+			closed
+			locked
+			viewerDidAuthor
+			viewerCanUpdate
+			viewerSubscription
+			author {
+				login
+			}
+			title
+			body
+			labels(first: 100) {
+				nodes {
+					name
+				}
+			}
+		}
+	}
+}

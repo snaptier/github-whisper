@@ -1,0 +1,26 @@
+{
+    "name": "snaptier/github-whisper",
+    "description": "Manage GitHub resources with an Eloquent-like API",
+    "type": "library",
+    "require": {
+        "laravel-whisper/whisper": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Snaptier\\GitHubWhisper\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Snaptier\\GitHubWhisper\\Tests\\": "tests"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Miguel Piedrafita",
+            "email": "soy@miguelpiedrafita.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
